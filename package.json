@@ -1,14 +1,27 @@
 {
-  "name": "flutter-clean-architecture",
+  "name": "flutter-easy-arch",
   "publisher": "flutter-clean-architecture",
-  "displayName": "flutter-clean-architecture",
+  "displayName": "Flutter Arch Pro - Clean & MVVM",
   "description": "Generate Clean Architecture files for Flutter",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "icon": "logo.png",
   "engines": {
     "vscode": "^1.110.0"
   },
   "categories": [
     "Other"
+  ],
+  "author": {
+    "name": "Emad Younis",
+    "email": "emadeadev@gmail.com",
+    "url": "https://www.linkedin.com/in/emadpro"
+  },
+  "badges": [
+    {
+      "url": "https://img.shields.io/badge/Flutter-Architecture-blue.svg",
+      "description": "Flutter Architecture",
+      "href": "https://marketplace.visualstudio.com/items?itemName=emadeadev.flutter-arch-pro-emad"
+    }
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
