@@ -1,0 +1,88 @@
+{
+  "name": "flutter-clean-architecture",
+  "publisher": "flutter-clean-architecture",
+  "displayName": "flutter-clean-architecture",
+  "description": "Generate Clean Architecture files for Flutter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "flutter-clean-architecture.generateFeature",
+        "title": "Flutter: Generate Architecture Feature"
+      },
+      {
+        "command": "flutter-clean-architecture.initCore",
+        "title": "Flutter: Init Core Architecture (From Scratch)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "flutter-clean-architecture.generateFeature",
+          "group": "navigation@1"
+        },
+        {
+          "command": "flutter-clean-architecture.initCore",
+          "group": "navigation@2"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Flutter Architecture Generator",
+      "properties": {
+        "flutterCleanArchitecture.defaultArchitecture": {
+          "type": "string",
+          "enum": [
+            "Ask me every time",
+            "Clean Architecture",
+            "MVVM",
+            "MVC",
+            "MVP"
+          ],
+          "default": "Ask me every time",
+          "description": "Select the default architectural pattern. If you choose 'Ask me every time', the extension will prompt you during generation."
+        },
+        "flutterCleanArchitecture.defaultStateManagement": {
+          "type": "string",
+          "enum": [
+            "Ask me every time",
+            "bloc",
+            "cubit",
+            "riverpod",
+            "getx",
+            "provider",
+            "none"
+          ],
+          "default": "Ask me every time",
+          "description": "Select the default state management. The extension will automatically generate the related files and install the required packages."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.110.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.56.1",
+    "eslint": "^9.39.3",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
