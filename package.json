@@ -1,15 +1,34 @@
 {
   "name": "flutter-easy-arch",
   "publisher": "flutter-clean-architecture",
-  "displayName": "Flutter Arch Pro - Clean & MVVM",
-  "description": "Generate Clean Architecture files for Flutter",
-  "version": "0.0.2",
+  "displayName": "Flutter EA Toolkit: Arch & Snippets",
+  "description": "The ultimate enterprise-level Flutter toolkit for generating Clean Architecture, MVVM boilerplates, and smart Dart snippets out of the box.",
+  "version": "0.0.3",
   "icon": "logo.png",
+  "pricing": "Free",
+  "galleryBanner": {
+    "color": "#00B4AB",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.110.0"
   },
   "categories": [
+    "Snippets",
+    "Programming Languages",
     "Other"
+  ],
+  "keywords": [
+    "flutter",
+    "dart",
+    "clean architecture",
+    "mvvm",
+    "bloc",
+    "riverpod",
+    "getx",
+    "snippets",
+    "generator",
+    "ea toolkit"
   ],
   "author": {
     "name": "Emad Younis",
@@ -18,22 +37,36 @@
   },
   "badges": [
     {
-      "url": "https://img.shields.io/badge/Flutter-Architecture-blue.svg",
-      "description": "Flutter Architecture",
-      "href": "https://marketplace.visualstudio.com/items?itemName=emadeadev.flutter-arch-pro-emad"
+      "url": "https://img.shields.io/badge/Flutter-Architecture-02569B.svg?logo=flutter&style=for-the-badge",
+      "description": "Flutter Architecture Support",
+      "href": "https://marketplace.visualstudio.com/items?itemName=flutter-clean-architecture.flutter-easy-arch"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Emad-Pro/flutter-clean-architecture"
+  },
+  "bugs": {
+    "url": "https://github.com/Emad-Pro/flutter-clean-architecture/issues"
+  },
+  "homepage": "https://github.com/Emad-Pro/flutter-clean-architecture#readme",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "snippets": [
+      {
+        "language": "dart",
+        "path": "./snippets/dart.json"
+      }
+    ],
     "commands": [
       {
         "command": "flutter-clean-architecture.generateFeature",
-        "title": "Flutter: Generate Architecture Feature"
+        "title": "Flutter EA: Generate Architecture Feature"
       },
       {
         "command": "flutter-clean-architecture.initCore",
-        "title": "Flutter: Init Core Architecture (From Scratch)"
+        "title": "Flutter EA: Init Core Architecture (From Scratch)"
       }
     ],
     "menus": {
@@ -49,7 +82,7 @@
       ]
     },
     "configuration": {
-      "title": "Flutter Architecture Generator",
+      "title": "Flutter EA Toolkit Settings",
       "properties": {
         "flutterCleanArchitecture.defaultArchitecture": {
           "type": "string",
@@ -61,7 +94,7 @@
             "MVP"
           ],
           "default": "Ask me every time",
-          "description": "Select the default architectural pattern. If you choose 'Ask me every time', the extension will prompt you during generation."
+          "description": "Select the default architectural pattern. If you choose 'Ask me every time', the EA Toolkit will prompt you during generation."
         },
         "flutterCleanArchitecture.defaultStateManagement": {
           "type": "string",
@@ -75,7 +108,7 @@
             "none"
           ],
           "default": "Ask me every time",
-          "description": "Select the default state management. The extension will automatically generate the related files and install the required packages."
+          "description": "Select the default state management. The EA Toolkit will automatically generate the related files and install the required packages."
         }
       }
     }
@@ -97,9 +130,5 @@
     "typescript": "^5.9.3",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Emad-Pro/flutter-clean-architecture"
   }
 }

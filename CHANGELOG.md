@@ -1,6 +1,14 @@
 # Changelog
 
-All notable changes to the "Flutter Arch Pro" extension will be documented in this file.
+All notable changes to the "Flutter EA Toolkit: Arch & Snippets" extension will be documented in this file.
+
+## [0.0.3] - 2026-03-19
+### Added
+- ✨ **EA Snippets**: Introduced over 15+ smart Dart snippets for Clean Architecture, Bloc, Riverpod, and GetX (Type `ea-` to trigger).
+- 🚀 **Rebranding**: Upgraded extension to **Flutter EA Toolkit: Arch & Snippets**.
+- 🔍 **SEO & Visibility**: Added marketplace gallery banner, comprehensive keywords, and category tagging.
+
+---
 
 ## [0.0.2] - 2026-03-18
 ### Added
